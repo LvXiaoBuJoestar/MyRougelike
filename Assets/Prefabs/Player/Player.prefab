@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4656bbaad011a43807fb1e6abf7a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponLauncher: {fileID: 2571407505210646916, guid: 35b7643783f173a43bf6521c68d69d7e, type: 3}
+  weaponLauncher: {fileID: 6520425693152997908, guid: 96b38167f974a3f468cb47ce91858a8a, type: 3}
 --- !u!50 &6102656356540408102
 Rigidbody2D:
   serializedVersion: 4

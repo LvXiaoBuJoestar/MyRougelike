@@ -22,13 +22,14 @@ public class Bullet : Weapon
 
     public void Init(Vector2 direction)
     {
-        mainDirection = direction.normalized;
-        this.direction = Quaternion.Euler(0, 0, 90 * sign) * mainDirection;
         angle = 0;
         if (Random.Range(0, 100) < 50)
             sign = 1;
         else
             sign = -1;
+
+        mainDirection = direction.normalized;
+        this.direction = Quaternion.Euler(0, 0, 90 * sign) * mainDirection;
     }
 
     private void Update()

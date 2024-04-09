@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour, IHealth
     private void Start()
     {
         target = GameManager.Instance.Player.transform;
-        maxHealth = 100;
+        maxHealth = 1000;
         health = maxHealth;
     }
 
