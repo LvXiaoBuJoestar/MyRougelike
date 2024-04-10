@@ -13,6 +13,7 @@ public class FlyCutterLauncher : MonoBehaviour
     private void Awake()
     {
         scanner = GetComponent<Scanner>();
+        PoolManager.Instance.CreateObjectPool(prefab);
     }
 
     private void Update()
@@ -36,7 +37,8 @@ public class FlyCutterLauncher : MonoBehaviour
 
     void Shoot(Transform target, float offsetValue = 0)
     {
-        FlyCutter flyCutter = Instantiate(prefab, transform.position, Quaternion.identity).GetComponent<FlyCutter>();
+        //FlyCutter flyCutter = Instantiate(prefab, transform.position, Quaternion.identity).GetComponent<FlyCutter>();
+        FlyCutter flyCutter = PoolManager.Instance.GetObjectFromPool(prefab, transform.position, Quaternion.identity).GetComponent<FlyCutter>();
         flyCutter.Init(target, offsetValue);
     }
 }

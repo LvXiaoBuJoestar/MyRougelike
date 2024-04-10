@@ -31,8 +31,9 @@ public class Weapon : MonoBehaviour, IAutoDestroy
     private void DestroyFunction()
     {
         if (weaponData.destroyParent)
-            Destroy(transform.parent.gameObject);
-        Destroy(gameObject);
+            transform.parent.gameObject.SetActive(false);
+        else
+            gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

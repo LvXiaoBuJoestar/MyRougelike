@@ -7,6 +7,11 @@ public class BulletLauncher : MonoBehaviour
 
     float timer;
 
+    private void Start()
+    {
+        PoolManager.Instance.CreateObjectPool(prefab);
+    }
+
     private void Update()
     {
         timer += Time.deltaTime;
@@ -21,7 +26,7 @@ public class BulletLauncher : MonoBehaviour
 
     void Shoot(Vector2 direction)
     {
-        GameObject go = Instantiate(prefab, transform.position, Quaternion.identity);
+        GameObject go = PoolManager.Instance.GetObjectFromPool(prefab, transform.position, Quaternion.identity);
         go.GetComponentInChildren<Bullet>().Init(direction);
     }
 }

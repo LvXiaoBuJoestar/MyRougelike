@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0667b05cc7a1011418ed4d7adc9d8716, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,9 +131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 23fc94892ba079d499e7986ca65863d0, type: 2}
-  target: {fileID: 0}
-  speed: 8
-  direction: {x: 0, y: 0}
 --- !u!60 &3760985175001368805
 PolygonCollider2D:
   m_ObjectHideFlags: 0
