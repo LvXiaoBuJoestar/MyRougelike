@@ -438,7 +438,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,6 +446,27 @@ TextureImporter:
       bones: []
       spriteID: 95ae06abc1213bf4e91596e743978254
       internalID: -1916190933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 374
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094af3a676fd6b74c822df8bd16b26ac
+      internalID: -127648378
       vertices: []
       indices: 
       edges: []
@@ -472,6 +493,7 @@ TextureImporter:
       Hand3: -1643019854
       Hand4: 1903613285
       Hand5: -241263408
+      Star: -127648378
       Tile0: 1477201866
       Tile1: -1808830465
       Tile2: 1870826071

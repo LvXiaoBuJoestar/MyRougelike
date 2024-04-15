@@ -7,15 +7,15 @@ public class PoolManager : MonoSingleton<PoolManager>
 
     public void CreateObjectPool(GameObject prefab)
     {
-        if (pools.ContainsKey(prefab))
-            return;
-
         ObjectPool pool = new ObjectPool(prefab);
         pools.Add(prefab, pool);
     }
 
     public GameObject GetObjectFromPool(GameObject prefab)
     {
+        if (!pools.ContainsKey(prefab))
+            CreateObjectPool(prefab);
+
         GameObject result = null;
         if(pools.TryGetValue(prefab, out ObjectPool pool)){
             result = pool.GetObjectFromPool();
@@ -25,6 +25,9 @@ public class PoolManager : MonoSingleton<PoolManager>
 
     public GameObject GetObjectFromPool(GameObject prefab, Vector3 position)
     {
+        if (!pools.ContainsKey(prefab))
+            CreateObjectPool(prefab);
+
         GameObject result = null;
         if (pools.TryGetValue(prefab, out ObjectPool pool))
         {
@@ -36,6 +39,9 @@ public class PoolManager : MonoSingleton<PoolManager>
 
     public GameObject GetObjectFromPool(GameObject prefab, Vector3 position, Quaternion rotation)
     {
+        if (!pools.ContainsKey(prefab))
+            CreateObjectPool(prefab);
+
         GameObject result = null;
         if (pools.TryGetValue(prefab, out ObjectPool pool))
         {

@@ -9,8 +9,8 @@ public class Enemy : MonoBehaviour, IHealth
     Transform target;
     Vector2 direction;
 
-    public int maxHealth { get; set; }
-    public int health { get; set; }
+    [SerializeField] private int maxHealth = 1000;
+    private int health;
 
     private void Awake()
     {
@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour, IHealth
     private void Start()
     {
         target = GameManager.Instance.Player.transform;
-        maxHealth = 1000;
         health = maxHealth;
     }
 
@@ -40,8 +39,22 @@ public class Enemy : MonoBehaviour, IHealth
             Die();
     }
 
-    public void Die()
+    private void Die()
     {
-        Destroy(gameObject);
+        GetComponent<DropLoot>().Drop();
+        gameObject.SetActive(false);
+    }
+
+    float lastTakeDamageTime = 0;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            if(Time.time - lastTakeDamageTime > 0.4f)
+            {
+                lastTakeDamageTime = Time.time;
+                collision.transform.GetComponent<IHealth>().ChangeHealth(-20);
+            }
+        }
     }
 }

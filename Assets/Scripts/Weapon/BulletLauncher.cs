@@ -9,7 +9,7 @@ public class BulletLauncher : MonoBehaviour
 
     private void Start()
     {
-        PoolManager.Instance.CreateObjectPool(prefab);
+        //PoolManager.Instance.CreateObjectPool(prefab);
     }
 
     private void Update()
