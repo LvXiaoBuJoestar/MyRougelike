@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    [SerializeField] GameObject weaponLauncher;
+    [SerializeField] int startWeapon = 0;
 
-    private void OnEnable()
+    private void Start()
     {
-        AddWeapon();
+        AddWeapon(startWeapon);
     }
 
-    public void AddWeapon()
+    public void AddWeapon(int id)
     {
-        Instantiate(weaponLauncher, transform);
+        WeaponData weaponData = WeaponManager.Instance.GetWeaponData(id);
+        WeaponLauncher weaponLauncher = Instantiate(weaponData.weaponLauncher, transform).GetComponent<WeaponLauncher>();
+        weaponLauncher.Init(weaponData);
     }
 }

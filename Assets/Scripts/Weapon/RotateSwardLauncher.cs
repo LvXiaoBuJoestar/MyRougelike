@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class RotateSwardLauncher : MonoBehaviour
+public class RotateSwardLauncher : WeaponLauncher
 {
-    [SerializeField] GameObject prefab;
     [SerializeField] float rotateSpeed = 150f;
     [SerializeField] float distance = 2f;
     [SerializeField] int count = 2;
 
-    private void OnEnable()
+    private void Start()
     {
         SetSward(count);
     }

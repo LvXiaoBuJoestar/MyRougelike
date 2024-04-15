@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a909a33b291fee7408caf78adac2acd0, type: 3}
   m_Name: RotateSward
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
+  weaponLauncher: {fileID: 3883954860686380323, guid: 0a693c3b94a963444807f74c040dc9c6, type: 3}
+  prefab: {fileID: 7368239019943304710, guid: c033e56cacd8f2f4695c9ceb3e23e607, type: 3}
   damage: 25
   pierce: -1
   autoDestroy: 0

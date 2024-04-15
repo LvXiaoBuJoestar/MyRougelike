@@ -4,6 +4,10 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public int id = 0;
+
+    public GameObject weaponLauncher;
+    public GameObject prefab;
+
     public int damage = 50;
     public int pierce = -1;
 

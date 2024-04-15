@@ -11,5 +11,12 @@ public class MonoSingleton<T> : MonoBehaviour where T : Component
             Destroy(gameObject);
         instance = this as T;
         DontDestroyOnLoad(gameObject);
+
+        OnAwake();
+    }
+
+    protected virtual void OnAwake()
+    {
+
     }
 }

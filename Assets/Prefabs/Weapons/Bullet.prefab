@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7f914b64dbd3b409f576a74760c6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: ecedea03cea711e45865eb078994f279, type: 2}
+  weaponData: {fileID: 0}
   speed: 8
   size: 0.2
   frequency: 4

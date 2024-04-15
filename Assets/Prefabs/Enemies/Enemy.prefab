@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8245460536194863478}
   - component: {fileID: 1535902424454482333}
   - component: {fileID: 1126368043224430439}
+  - component: {fileID: 5117243587624182062}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -120,6 +121,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  maxHealth: 100
+--- !u!114 &5117243587624182062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6221970385570675450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b31ae33a7f40f4d9c07c95d8101947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loots:
+  - lootPrefab: {fileID: 3829125496645738262, guid: 1bd9e1a0dfd5fdb4c8ac864c717fc345, type: 3}
+    dropProbability: 80
+  - lootPrefab: {fileID: 965090604327484453, guid: 2605a4a012b97e94e90f54d07ea62f9b, type: 3}
+    dropProbability: 15
+  - lootPrefab: {fileID: 9007828927576807492, guid: 314ad0e9ee2aefa46b2c667c3b2fbdd3, type: 3}
+    dropProbability: 5
 --- !u!1 &7104924943316558591
 GameObject:
   m_ObjectHideFlags: 0

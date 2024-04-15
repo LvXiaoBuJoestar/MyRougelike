@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   id: 0
+  weaponLauncher: {fileID: 2571407505210646916, guid: 35b7643783f173a43bf6521c68d69d7e, type: 3}
+  prefab: {fileID: 6496951834244941575, guid: 44e15890dd96dce49a5226da13ef2312, type: 3}
   damage: 50
   pierce: 0
   autoDestroy: 1

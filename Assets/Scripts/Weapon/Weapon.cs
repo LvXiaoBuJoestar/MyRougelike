@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour, IAutoDestroy
 {
-    [SerializeField] WeaponData weaponData;
+    [HideInInspector] public WeaponData weaponData;
 
     private int pierce = -1;
 

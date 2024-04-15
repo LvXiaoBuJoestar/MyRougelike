@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class BulletLauncher : MonoBehaviour
+public class BulletLauncher : WeaponLauncher
 {
-    [SerializeField] GameObject prefab;
     [SerializeField] float launchInterval = 1f;
 
     float timer;
-
-    private void Start()
-    {
-        //PoolManager.Instance.CreateObjectPool(prefab);
-    }
 
     private void Update()
     {

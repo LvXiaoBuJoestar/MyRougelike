@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a909a33b291fee7408caf78adac2acd0, type: 3}
   m_Name: FlyCutter
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
+  weaponLauncher: {fileID: 6520425693152997908, guid: 96b38167f974a3f468cb47ce91858a8a, type: 3}
+  prefab: {fileID: 8074694610854577008, guid: 0a517f24c0119f84db767f84e3352584, type: 3}
   damage: 30
   pierce: 0
   autoDestroy: 1
